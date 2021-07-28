@@ -1,0 +1,207 @@
+.subscriptions {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  max-width: 60%;
+  min-width: auto;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 183, 255, 0.5),
+    rgba(187, 82, 248, 0.3)
+  );
+  border-radius: 2rem;
+  font-family: $font-primary;
+  box-shadow: 0.2rem 0.4rem 2rem rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid linear-gradient(
+    rgba(0, 183, 255, 1),
+    rgba(187, 82, 248, 1)
+  );
+
+
+
+  @media screen and (max-width: $bp-small) {
+    max-width: 100%;
+    margin-top: -5%;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+
+    background: rgba($color: #000000, $alpha: 0.4);
+    border-radius: 1rem;
+
+    text-shadow: $text-shadow-secondary;
+    padding: 1rem;
+    
+
+    & > * {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      list-style: none;
+
+      @media only screen and (max-width:$bp-medium) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (max-width:$bp-small) {
+        font-size: 1.5rem;
+      }
+
+   
+
+    }
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 2rem;
+    list-style: none;
+
+
+
+    .subscription {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+
+      
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      margin: 2rem auto;
+      padding: 0.8rem;
+      border-radius: 1rem;
+
+      font-weight: bold;
+      text-shadow: $text-shadow-primary;
+      box-shadow: $text-shadow-secondary;
+
+      transition: all 0.3s ease;
+
+      .sub-amount::before {
+        content:'$';
+      }
+
+      &:hover {
+        transform: translateY(-5%);
+        text-shadow: $text-shadow-hover;
+        background-color: rgba($color: #202020, $alpha: 0.3);
+      }
+    }
+  }
+
+  &__footer {
+
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    text-align: center;
+    padding: 0.8rem;
+    background: rgba($color: #000000, $alpha: 0.25);
+    box-shadow: $text-shadow-secondary;
+    border-radius: 1rem;
+
+    font-size: 1.5rem;
+    text-shadow: $text-shadow-secondary;
+
+
+
+    h4 {
+      text-align: center;
+      flex-wrap: nowrap;
+      font-size: 1.8rem;
+
+      @media only screen and (max-width:$bp-small) {
+        font-size: 1.5rem;
+      }
+  
+ 
+    }
+
+    .sub-total {
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: $text-shadow-secondary;
+      transition: all 0.3s ease;
+      margin: 1rem;
+
+      &:hover {
+        transform: translateY(-2px);
+        text-shadow: $text-shadow-hover;
+      }
+
+    }
+  }
+
+  &__button {
+    width: 80%;
+    border: none;
+    border-radius: 1rem;
+    background: linear-gradient(
+      to right bottom,
+      rgba(0, 183, 255, 0.5),
+      rgba(187, 82, 248, 0.3)
+    );
+
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    color: white;
+    font-weight: bold;
+    font-family: $font-primary;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: $text-shadow-secondary;
+
+    box-shadow: 0 5px 15px #193047;
+    transition: all 0.4s ease;
+
+    @media only screen and (max-width:$bp-small) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width:$bp-smallest) {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+      text-shadow: $text-shadow-hover;
+      background: linear-gradient(
+        to right bottom,
+        rgba(187, 82, 248, 0.3),
+        rgba(0, 183, 255, 0.5)
+      );
+
+
+      &:active {
+        transform: translateY(2px);
+        text-shadow: $text-shadow-secondary;
+        box-shadow: $text-shadow-secondary;
+
+      }
+    }
+  }
+}
+
+.fadeInAni {
+  animation: fadeIn 2s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    // display: none;
+    opacity: 0;
+  }
+  100% {
+    // display: flex;
+    opacity: 1;
+  }
+}

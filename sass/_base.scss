@@ -1,0 +1,67 @@
+$bp-largest: 75em; //1200px / 16
+$bp-large: 68.75em; //1100px/ 16x
+$bp-medium: 56.25em; //900px / 16x
+$bp-small: 37.5em; //600px / 16x
+$bp-smallest: 31.25em; //500px / 16x
+
+$color-primary: rgb(0, 102, 255);
+$color-secondary: rgb(234, 82, 248);
+$color-tertiary: rgba(255,174,11, 1);
+$color-text: rgb(240, 237, 241);
+$color-text-light: #fff;
+$color-text-dark: rgb(121, 121, 121);
+$gradient-clip: linear-gradient(rgba(255,174,11, 1), rgba(255,255,255,0));
+
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Prata', sans-serif;
+
+$text-shadow-primary: .2rem .1rem .4rem rgba($color: #000000, $alpha: .4);
+$text-shadow-secondary: .1rem .3rem .4rem rgba(0, 0, 0, 0.6);
+$text-shadow-hover: .2rem .6rem .8rem rgba(0, 0, 0, 0.8);
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px/16px = 62.5%
+  scroll-behavior: smooth;
+  
+
+  // @media screen and (max-width: $bp-medium) {
+  //   font-size: .5rem;
+  // }
+}
+
+body {
+  line-height: 1.6;
+  color: $color-text;
+  background-image: linear-gradient(
+    to top right,
+    $color-primary,
+    $color-secondary
+  );
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-size: cover;
+  padding: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;  
+}
+
+.selected {
+  border: 1px solid orange;
+}

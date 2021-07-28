@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SubSonar</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&family=Prata&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/sass/main.css">
+</head>
+
+<body>
+	<div class="container">
+		<nav class="nav">
+			<h1 class="nav__logo">SubSonar</h1>
+			<ul class="nav__links">
+				<li class="nav__link"><a href="#" class="nav__link--1">Home</a></li>
+				<li class="nav__link"><a href="#about" class="nav__link--2">About</a></li>
+				<li class="nav__link"><a href="#" class="nav__link--3">Login</a></li>
+				<li class="nav__link"><a href="#" class="nav__link--4">Support</a></li>
+			</ul>
+		</nav>
+
+		<header class="header">
+			<h2 class="header__cta" id="about">Track your subscriptions and upcoming expenses with SubSonar!</h2>
+			<p class="header__text">Use SubSonar to keep track of all of your subscriptions. Add your subscriptions to the list, and SubSonar will total them up for you and display simple billing info for each, all in one place.</p>
+			<button class="header__btn">Try it!</button>
+		</header>
+
+
+	</div>
+	<div class="logo">
+		<svg>
+			<use xlink:ahref="#submarine-svgrepo-com.svg"></use>
+		</svg>
+	</div>
+
+	<section class="subscriptions">
+		<ul class="subscriptions__header">
+			<li>Date</li>
+			<li>Subscription</li>
+			<li>Price</li>
+			<!-- <li>Recurring</li> -->
+		</ul>
+		<ul class="subscriptions__content">
+			<li class="subscription" id="1">
+				<span class="sub-date">3</span>
+				<span class="sub-name">Netflix</span>
+				<span class="sub-amount">13.99</span>
+				<!-- <span class="sub-recurring">Monthly</span> -->
+			</li>
+			<li class="subscription"id="2">
+				<span class="sub-date">14</span>
+				<span class="sub-name">Hulu</span>
+				<span class="sub-amount">11.99</span>
+				<!-- <span class="sub-recurring">Monthly</span> -->
+			</li>
+			<li class="subscription"id="3">
+				<span class="sub-date">30</span>
+				<span class="sub-name">Disney +</span>
+				<span class="sub-amount">7.99</span>
+				<!-- <span class="sub-recurring">Monthly</span> -->
+			</li>
+			<li class="subscription"id="4">
+				<span class="sub-date">30</span>
+				<span class="sub-name">F1 TV</span>
+				<span class="sub-amount">9.99</span>
+				<!-- <span class="sub-recurring">Monthly</span> -->
+			</li>
+		</ul>
+		<div class="subscriptions__footer">
+			<div class="subscripions__total">
+				<h4>Total Monthly Subscription Cost</h4>
+				<p class="sub-total">
+					$43.96
+				</p>
+			</div>
+			<div>
+				<button id="new_sub_btn" class="subscriptions__button"><span>Track New Subscription</span></button>
+				<button id="remove_sub_btn" class="subscriptions__button"><span>Remove Subscription</span></button>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="new__subscription hide">
+		<form action="#">
+
+			<div>
+				<label for="new-sub-name">Subscription Name</label>
+				<input type="text" name="new-sub-name" id="new-sub-name" class="new-sub__input"
+					placeholder="Enter name here...">
+
+			</div>
+
+			<div>
+				<label for="new-sub-amount">Amount</label>
+				<input type="number" name="new-sub-amount" id="new-sub-amount" class="new-sub__input" step="0.01"
+					min="0" placeholder="$4.99">
+			</div>
+
+			<div>
+				<label for="new-sub-date">Billing Date</label>
+				<input type="number" name="new-sub-date" id="new-sub-date" class="new-sub__input"
+					placeholder="1 - 31" min="0" max="31">
+			</div>
+
+
+
+<!-- 
+			<div class="new-sub-recurring" id="new-sub-recuring">
+
+				<label for="new-sub-recurring" class="new-sub-recurring-heading">Recurring</label>
+
+				<div class="radioWrapper">
+
+					<div class="radioGroup">
+						<label for="contactChoice1">Daily</label>
+						<input type="radio" id="contactChoice1" name="new-sub__recurring" value="Daily">
+					</div>
+
+					<div class="radioGroup">
+						<label for="contactChoice2">Weekly</label>
+						<input type="radio" id="contactChoice2" name="new-sub__recurring" value="Weekly">
+					</div>
+
+					<div class="radioGroup">
+						<label for="contactChoice3">Bi-Weekly</label>
+						<input type="radio" id="contactChoice3" name="new-sub__recurring" value="Bi-Weekly">
+					</div>
+
+					<div class="radioGroup">
+						<label for="contactChoice3">Monthly</label>
+						<input type="radio" id="contactChoice3"  checked name="new-sub__recurring" value="Monthly">
+					</div>
+
+					<div class="radioGroup">
+						<label for="contactChoice3">Yearly</label>
+						<input type="radio" id="contactChoice3" name="new-sub__recurring" value="Yearly">
+					</div>
+
+				</div>
+
+			</div> -->
+
+
+
+
+			<button class="new_sub_submit_btn">Submit</button>
+
+		</form>
+	</section>
+
+	<script src="js/index.js"></script>
+</body>
+
+</html>

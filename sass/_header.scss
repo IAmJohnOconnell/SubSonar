@@ -1,0 +1,96 @@
+.header {
+  margin-top: 10%;
+  display: grid;
+  place-items: center;
+  grid-area: cta;
+  z-index: 2;
+  grid-template-columns: minmax(auto, 150ch) 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas:
+    "cta-header . ."
+    "cta-text . ."
+    "cta-btn . .";
+  text-shadow: $text-shadow-primary;
+
+  &__cta {
+    font-family: $font-primary;
+    font-size: 4rem;
+    grid-area: cta-header;
+    z-index: 2;
+    transition: all 0.3s ease;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: 2rem;
+    grid-area: cta-text;
+    z-index: 2;
+    transition: all 0.5s ease;
+
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      background-color: rgba(0, 0, 0, 0.25);
+      box-shadow: 0.3rem 1rem 1.5rem rgba(0, 0, 0, 0.3);
+      border-radius: 2rem;
+      padding: 3rem;
+      text-shadow: $text-shadow-hover;
+    }
+  }
+
+  &__btn {
+    grid-area: cta-btn;
+    font-size: 2rem;
+    width: 25%;
+    box-shadow: 0.3rem 1rem 1.5rem rgba(0, 0, 0, 0.3);
+    margin-top: 4rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-family: $font-primary;
+    font-weight: bold;
+    color: $color-secondary;
+    transition: all 0.2s ease;
+    z-index: 2;
+
+
+    @media screen and (max-width: $bp-small) {
+      width: 100%;
+      margin-top: -8rem;
+    }
+
+    a {
+      text-decoration: none;
+      // font-family: $font-primary;
+      // font-weight: bold;
+      color: $color-secondary;
+    }
+
+    &:hover {
+      transform: translateY(1px);
+      box-shadow: 0.1rem 0.8rem 1rem rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.logo {
+  svg {
+    background-image: url(/submarine-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 80%;
+    top: 25%;
+    z-index: 1;
+    transform: rotate(-15deg) scale(300%);
+    transition: all 2s ease;
+
+    @media screen and (max-width: $bp-medium) {
+      filter: opacity(65%);
+      transform: rotate(-285deg) scale(250%) translate(40%, 70%);
+        
+    }
+  }
+}

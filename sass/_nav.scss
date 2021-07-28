@@ -1,0 +1,61 @@
+.nav {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  grid-template-areas: "logo . links";
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: 2rem;
+  align-items: center;
+
+ @media screen and (max-width: $bp-small) {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: -15%;
+  
+ }
+
+  &__logo {
+    font-size: 6rem;
+    grid-area: logo;
+    text-shadow: $text-shadow-primary;
+  }
+
+  &__links {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-area: links;
+    grid-column-gap: 2.5rem;
+    z-index: 2;
+
+    @media screen and (max-width: $bp-small) {
+      grid-column: 1/ -1;
+      grid-row: 2/3;
+      align-content: center;
+      justify-content: space-evenly;
+      // font-size: 2rem;
+
+      
+    }
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    & > * {
+      text-decoration: none;
+      color: $color-text;
+      text-shadow: 0.4rem 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.4);
+      transition: all 0.2s ease;
+    }
+
+    &:hover a {
+      color: $color-text-light;
+      text-shadow: 0.2rem 0.3rem 0.5rem rgba($color: #000000, $alpha: 0.8);
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
