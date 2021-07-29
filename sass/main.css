@@ -44,7 +44,6 @@ body {
   font-size: 2rem;
   align-items: center;
 }
-
 @media screen and (max-width: 37.5em) {
   .nav {
     grid-template-columns: 1fr;
@@ -57,7 +56,6 @@ body {
   grid-area: logo;
   text-shadow: 0.2rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
 }
-
 .nav__links {
   list-style: none;
   display: grid;
@@ -66,7 +64,6 @@ body {
   grid-column-gap: 2.5rem;
   z-index: 2;
 }
-
 @media screen and (max-width: 37.5em) {
   .nav__links {
     grid-column: 1/-1;
@@ -81,12 +78,10 @@ body {
   text-shadow: 0.4rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease;
 }
-
 .nav__link:hover a, .nav__link:link:hover a, .nav__link:visited:hover a {
   color: #fff;
   text-shadow: 0.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8);
 }
-
 .nav__link:hover, .nav__link:link:hover, .nav__link:visited:hover {
   transform: translateY(-2px);
 }
@@ -102,7 +97,6 @@ body {
   grid-template-areas: "cta-header . ." "cta-text . ." "cta-btn . .";
   text-shadow: 0.2rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
 }
-
 .header__cta {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
@@ -110,7 +104,6 @@ body {
   z-index: 2;
   transition: all 0.3s ease;
 }
-
 @media screen and (max-width: 37.5em) {
   .header__cta {
     font-size: 3.5rem;
@@ -123,7 +116,6 @@ body {
   z-index: 2;
   transition: all 0.5s ease;
 }
-
 @media screen and (max-width: 37.5em) {
   .header__text {
     font-size: 1.8rem;
@@ -149,7 +141,6 @@ body {
   transition: all 0.2s ease;
   z-index: 2;
 }
-
 @media screen and (max-width: 37.5em) {
   .header__btn {
     width: 100%;
@@ -160,14 +151,13 @@ body {
   text-decoration: none;
   color: #ea52f8;
 }
-
 .header__btn:hover {
   transform: translateY(1px);
   box-shadow: 0.1rem 0.8rem 1rem rgba(0, 0, 0, 0.6);
 }
 
 .logo svg {
-  background-image: url(/submarine-svgrepo-com.svg);
+  background-image: url(../submarine-svgrepo-com.svg);
   background-repeat: no-repeat;
   position: absolute;
   left: 80%;
@@ -176,13 +166,13 @@ body {
   transform: rotate(-15deg) scale(300%);
   transition: all 2s ease;
 }
-
 @media screen and (max-width: 56.25em) {
   .logo svg {
     filter: opacity(65%);
     transform: rotate(-285deg) scale(250%) translate(40%, 70%);
   }
 }
+
 .subscriptions {
   display: flex;
   opacity: 0;
@@ -201,7 +191,6 @@ body {
   box-shadow: 0.2rem 0.4rem 2rem rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid linear-gradient(#00b7ff, #bb52f8);
 }
-
 @media screen and (max-width: 37.5em) {
   .subscriptions {
     max-width: 100%;
@@ -216,14 +205,12 @@ body {
   text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
   padding: 1rem;
 }
-
 .subscriptions__header > * {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   list-style: none;
 }
-
 @media only screen and (max-width: 56.25em) {
   .subscriptions__header > * {
     font-size: 2rem;
@@ -239,7 +226,6 @@ body {
   font-size: 2rem;
   list-style: none;
 }
-
 .subscriptions__content .subscription {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
@@ -252,17 +238,14 @@ body {
   box-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
 }
-
 .subscriptions__content .subscription .sub-amount::before {
   content: "$";
 }
-
 .subscriptions__content .subscription:hover {
   transform: translateY(-5%);
   text-shadow: 0.2rem 0.6rem 0.8rem rgba(0, 0, 0, 0.8);
   background-color: rgba(32, 32, 32, 0.3);
 }
-
 .subscriptions__footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -275,13 +258,11 @@ body {
   font-size: 1.5rem;
   text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 }
-
 .subscriptions__footer h4 {
   text-align: center;
   flex-wrap: nowrap;
   font-size: 1.8rem;
 }
-
 @media only screen and (max-width: 37.5em) {
   .subscriptions__footer h4 {
     font-size: 1.5rem;
@@ -294,12 +275,10 @@ body {
   transition: all 0.3s ease;
   margin: 1rem;
 }
-
 .subscriptions__footer .sub-total:hover {
   transform: translateY(-2px);
   text-shadow: 0.2rem 0.6rem 0.8rem rgba(0, 0, 0, 0.8);
 }
-
 .subscriptions__button {
   width: 80%;
   border: none;
@@ -317,7 +296,6 @@ body {
   box-shadow: 0 5px 15px #193047;
   transition: all 0.4s ease;
 }
-
 @media only screen and (max-width: 37.5em) {
   .subscriptions__button {
     font-size: 1.5rem;
@@ -333,7 +311,6 @@ body {
   text-shadow: 0.2rem 0.6rem 0.8rem rgba(0, 0, 0, 0.8);
   background: linear-gradient(to right bottom, rgba(187, 82, 248, 0.3), rgba(0, 183, 255, 0.5));
 }
-
 .subscriptions__button:hover:active {
   transform: translateY(2px);
   text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
@@ -364,7 +341,6 @@ body {
   box-shadow: 0.2rem 0.4rem 2rem rgba(0, 0, 0, 0.4);
   margin: 0 auto;
 }
-
 .new__subscription form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -377,7 +353,6 @@ body {
   transition: all 0.2s ease;
   /* Chrome, Safari, Edge, Opera */
 }
-
 @media only screen and (max-width: 37.5em) {
   .new__subscription form {
     display: flex;
@@ -400,7 +375,6 @@ body {
   transition: all 0.2s ease;
   -moz-appearance: textfield;
 }
-
 @media only screen and (max-width: 37.5em) {
   .new__subscription form .new-sub__input {
     width: 100%;
@@ -411,22 +385,18 @@ body {
   box-shadow: 0.2rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
 }
-
 .new__subscription form .new-sub__input:focus {
   outline: none;
 }
-
 .new__subscription form .new-sub__input:focus::placeholder {
   color: transparent;
   text-shadow: none;
 }
-
 .new__subscription form .new-sub__input::placeholder {
   color: white;
   font-family: "Montserrat", sans-serif;
   text-shadow: 0.2rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
 }
-
 .new__subscription form ::-webkit-outer-spin-button,
 .new__subscription form ::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -456,13 +426,11 @@ body {
   box-shadow: 0 5px 15px #193047;
   transition: all 0.4s ease;
 }
-
 .new_sub_submit_btn:hover {
   transform: translateY(-1px);
   text-shadow: 0.2rem 0.6rem 0.8rem rgba(0, 0, 0, 0.8);
   background: linear-gradient(to right bottom, rgba(187, 82, 248, 0.3), rgba(0, 183, 255, 0.5));
 }
-
 .new_sub_submit_btn:hover:active {
   transform: translateY(2px);
   text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
